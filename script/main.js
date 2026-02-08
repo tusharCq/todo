@@ -263,7 +263,13 @@ const animationTimeline = () => {
         rotation: 90,
       },
       "+=1"
-    );
+    )
+    // Animation for section ten (next page)
+    .from(".ten", 1, {
+      opacity: 0,
+      y: 50,
+    })
+    .staggerFrom(".ten p", 0.8, ideaTextTrans, 0.5);
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
