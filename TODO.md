@@ -45,18 +45,20 @@ Modern mobile browsers (iOS Safari, Android Chrome) block autoplay audio without
 ## Mobile/Tablet Layout Fix
 
 ### Problem:
-Text in `.nine` section was not fitting properly on mobile and iPad screens.
+Text in `.nine` section was not fitting properly on mobile and iPad screens - the full text wasn't displaying on one page.
 
 ### Solution:
-1. Added proper `<br>` tags for line breaks in text
-2. Created separate classes `.nine-text` and `.nine-link` for targeted styling
-3. Added proper responsive styles:
-   - Text alignment: left for better readability
-   - Font size: 1.1rem (mobile), 1.3rem (desktop), 1.4rem (tablet)
-   - Line height: 1.5-1.6 for comfortable reading
-   - Padding: 10-20px for safe margins
-   - Word wrap and overflow handling
-4. Added iPad/Tablet media query (501px - 1024px)
+1. Split content into two sections:
+   - `.nine` - Main love message (fits on first page)
+   - `.ten` - Anniversary wishes and link (scrolls to next page)
+2. Added proper `<br>` tags for line breaks
+3. Created separate classes for styling
+4. Added smooth animation for section ten
+5. Added responsive styles for both sections:
+   - Mobile: 1.1rem font size
+   - Tablet: 1.4rem font size
+   - Desktop: 1.3rem font size
+6. Added iPad/Tablet media query (501px - 1024px)
 
 ## Testing
 Test on:
