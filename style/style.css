@@ -313,6 +313,31 @@ body {
   font-weight: lighter;
 }
 
+.nine .nine-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  padding: 0 15px;
+  text-align: left;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.nine .nine-link {
+  font-size: 1.2rem;
+  padding: 0 15px;
+}
+
+.nine .nine-link a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
 #replay {
   z-index: 3;
   cursor: pointer;
@@ -383,6 +408,17 @@ body {
     font-weight: lighter;
   }
 
+  .nine .nine-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .nine .nine-link {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
   .start-content h1 {
     font-size: 1.8rem;
   }
@@ -405,6 +441,36 @@ body {
     width: 45px;
     height: 45px;
     font-size: 1.3rem;
+  }
+}
+
+/* iPad and Tablet Styles */
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+
+  .nine .nine-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+
+  .nine .nine-link {
+    font-size: 1.3rem;
+    padding: 0 20px;
+  }
+
+  .one {
+    font-size: 3.5rem;
+  }
+
+  .three {
+    font-size: 2.5rem;
+  }
+
+  .wish-hbd {
+    font-size: 2.5em;
   }
 }
 
