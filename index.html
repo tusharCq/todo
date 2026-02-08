@@ -13,9 +13,17 @@
   </head>
 
   <body>
-    <audio id="bgMusic" autoplay loop>
+    <audio id="bgMusic" loop>
       <source src="Enna Sona Ok Jaanu 320 Kbps.mp3" type="audio/mpeg">
     </audio>
+    <script>
+      document.addEventListener('click', function() {
+        const audio = document.getElementById('bgMusic');
+        audio.play().catch(function(error) {
+          console.log('Audio playback failed:', error);
+        });
+      }, { once: true });
+    </script>
     <div class="container">
       <div class="one">
         <h1 class="one">
