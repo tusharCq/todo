@@ -99,7 +99,14 @@ body {
   text-align: center;
   visibility: hidden;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.container > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20vh;
 }
 
 .container div.six {
@@ -115,11 +122,49 @@ body {
   top: 0;
 }
 
-.container > div {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 20vh;
+/* Allow scrolling on mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .container > div {
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .nine, .ten {
+    position: relative;
+    top: 0;
+    padding: 20px 0;
+    max-height: none;
+  }
+
+  .nine .nine-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .ten .ten-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .ten .ten-link {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .seven, .eight {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+  }
 }
 
 .one {
@@ -376,34 +421,42 @@ body {
   cursor: pointer;
 }
 
-/* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
+/* Mobile Styles */
 @media screen and (max-width: 500px) {
   .container {
     width: 90%;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .container > div {
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .nine, .ten {
+    position: relative;
+    top: 0;
+    padding: 20px 0;
+    max-height: none;
+  }
+
+  .nine p, .nine-text {
+    font-size: 1.1rem !important;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .ten {
+    visibility: visible !important;
+  }
+
+  .ten p {
+    font-size: 1.1rem !important;
+    line-height: 1.5;
+    padding: 0 10px;
   }
 
   .four .text-box {
@@ -434,33 +487,6 @@ body {
 
   .wish h5 {
     font-size: 1.4rem;
-  }
-
-  .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
-  }
-
-  .nine .nine-text {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    padding: 0 10px;
-  }
-
-  .nine .nine-link {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .ten .ten-text {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    padding: 0 10px;
-  }
-
-  .ten .ten-link {
-    font-size: 1rem;
-    padding: 0 10px;
   }
 
   .start-content h1 {
